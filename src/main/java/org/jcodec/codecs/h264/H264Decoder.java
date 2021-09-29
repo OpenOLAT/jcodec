@@ -62,16 +62,7 @@ public class H264Decoder extends VideoDecoder {
     public H264Decoder() {
         pictureBuffer = new ArrayList<Frame>();
         poc = new POCManager();
-        this.threaded = Runtime.getRuntime().availableProcessors() > 1;
-        if (threaded) {
-            tp = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors(), new ThreadFactory() {
-                public Thread newThread(Runnable r) {
-                    Thread t = Executors.defaultThreadFactory().newThread(r);
-                    t.setDaemon(true);
-                    return t;
-                }
-            });
-        }
+        this.threaded = false;
         reader = new FrameReader();
     }
 
