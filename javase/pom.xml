@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.jcodec</groupId>
+	<groupId>org.openolat</groupId>
 	<artifactId>jcodec-javase</artifactId>
 	<name>JCodec</name>
 	<url>http://jcodec.org</url>
 	<packaging>jar</packaging>
-	<version>0.2.4-SNAPSHOT</version>
+	<version>0.2.5.1</version>
 	<description>Pure Java implementation of video/audio codecs and formats</description>
 	<licenses>
 		<license>
@@ -26,6 +26,17 @@
 			<email>jcodecproject@gmail.com</email>
 		</developer>
 	</developers>
+	<distributionManagement>
+		<!-- (This is not intended for general use!) -->
+		<repository>
+			<id>nexus.openolat</id>
+			<url>https://nexus.openolat.org/nexus/content/repositories/openolat</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus.openolat</id>
+			<url>https://nexus.openolat.org/nexus/content/repositories/openolat-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<testSourceDirectory>src/test/java</testSourceDirectory>
@@ -102,9 +113,9 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>org.jcodec</groupId>
+			<groupId>org.openolat</groupId>
 			<artifactId>jcodec</artifactId>
-			<version>0.2.4-SNAPSHOT</version>
+			<version>0.2.5.1</version>
 		</dependency>
     <dependency>
       <groupId>junit</groupId>
